@@ -15,7 +15,7 @@ let ipCounter = 0;
 let portcounter = 0;
 // /<ADDRESS>-<PORT>
 
-//checkPortIp("208.118.235.190","8332")
+//checkPortIp("208.118.235.190","8332");
 
 function checkPortIp(_port , _ip){
     req("https://bitnodes.earn.com/api/v1/nodes/"+_port+"-"+_ip,{json:true}, function(error, response, body) {
@@ -50,7 +50,7 @@ makeNodeArray()
 function makeNodeArray(){
     for(var i in data_nodes){
         //console.log(i);
-        //console.log(data_nodes[i])
+        //console.log(data_nodes[i]);
         nodes_ar.push({
             ip:i,
             ports:data_nodes[i]
