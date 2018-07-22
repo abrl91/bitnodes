@@ -1,6 +1,14 @@
 const http = require('http');
 const req = require('request');
 
+
+// let server = http.createServer(function(req, res) {
+//     res.writeHead(200, {'Content-Type': 'application/json'});
+//     res.end(JSON.stringify(data));
+
+// }).listen(3000);
+// console.log('Listening to port 3000');
+
 let data_nodes = {
     "208.118.235.190":[8333,34,56],
     "78.46.32.92":[8333,60],
@@ -34,17 +42,6 @@ function checkPortIp(_port , _ip){
     });
 }
 
-
-let server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'application/json'});
-   
-
-    res.end(JSON.stringify(data));
-
-}).listen(3000);
-console.log('Listening to port 3000');
-
-
 makeNodeArray()
 
 function makeNodeArray(){
@@ -55,7 +52,7 @@ function makeNodeArray(){
             ip:i,
             ports:data_nodes[i]
         })
-       // 
+       
     }
    // console.log(nodes_ar);
     setInterval(checkPortsArrayInterval,1000);
