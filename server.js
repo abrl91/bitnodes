@@ -34,7 +34,7 @@ function checkPortIp(_port , _ip){
                 console.log("the node:"+_port+":"+_ip+" not found");
             }
             else{
-                console.log("the node:"+_port+":"+_ip+" is founded");
+                console.log("the node:"+_port+":"+_ip+" found");
             }
            // console.log('statusCode:', response && response.statusCode); 
            // console.log('body:', body); 
